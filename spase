@@ -1,0 +1,50 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int m,n;int *arr;int c=0;
+    printf("Enter the number of rows\n");
+    scanf("%d",&m);
+    printf("Enter the number of rows\n");
+    scanf("%d",&n);
+    arr=(int *)malloc(m*n*sizeof(int));
+    for(int i=0;i<m;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+            scanf("%d",(arr+i*n+j));
+        }
+    }
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+            if(*(arr+i*n+j)!=0)
+            {
+                ++c;
+            }
+        }
+    }
+    int s[90][90];
+        s[0][0]=m;s[0][1]=n;s[0][2]=c;
+    int k=1;
+    for(int i=0;i<m;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+            if(*(arr+i*n+j)!=0)
+            {
+               s[k][0]=i;
+               s[k][1]=j;
+               s[k][2]=*(arr+i*n+j); 
+               k++;
+            }
+        }
+    }
+    for(int i=0;i<c+1;i++)
+    {for(int j=0;j<3;j++)
+    {
+        printf("%d",s[i][j]);
+    }printf("\n");
+}
+}
