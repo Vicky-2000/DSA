@@ -1,0 +1,148 @@
+#include<stdio.h>
+#include<stdlib.h>
+struct node{
+    int data;
+    struct node *link;
+};
+int n;
+struct node *root=NULL;
+void insert();
+void add();
+void display();
+void del();
+void reverse();
+void insert()
+
+{
+struct node*temp;
+    temp=(struct node *)malloc(sizeof(struct node));
+ printf("Enter the node data:-\n");
+    scanf("%d",&temp->data);
+    temp->link=NULL;
+    if(root==NULL)
+    {
+        root=temp;
+    }
+    else
+    {
+      struct node *p;
+      p=root;
+      while(p->link!=NULL)
+      {
+          p=p->link;
+      }
+      p->link=temp;
+    }
+}
+int main()
+{ int i;
+printf("Enter the number of nodes:-\n");
+scanf("%d",&n);
+for(i=0;i<n;i++)
+{
+    insert();
+}
+display();
+printf("\n");
+reverse();
+display();
+}
+void display(){
+    struct node*temp;
+temp=root;
+if(temp==NULL)
+{
+printf("empty");
+}
+else{
+    while(temp!=NULL)
+    {
+        printf("%d->",temp->data);
+        temp=temp->link;
+    }
+}
+}
+void add()
+{struct node*temp;
+struct node*p;
+ temp=(struct node *)malloc(sizeof(struct node));
+ printf("Enter the node data:-\n");
+    scanf("%d",&temp->data);
+    int loc;
+    printf("Enter the location:-\n");
+    scanf("%d",&loc);
+    int i=1;
+    if(loc>n)
+    {
+        printf("Invalid location");
+    }
+    else{
+        p=root;
+        while(i<loc)
+        {
+            p=p->link;i++;
+        }
+    }
+    temp->link=NULL;
+    temp->link=p->link;
+    p->link=temp;
+
+
+}
+void del()
+{
+ struct node *temp;
+ int loc;
+ printf("enter the location:\n");
+ scanf("%d",&loc);
+ if(loc>n)
+ {
+     printf("Invalid Location\n");
+ }
+
+else if(loc==1)
+{
+    temp=root;
+    root=temp->link;
+    temp->link=NULL;
+    free(temp);
+}
+else{
+    int i=1;struct node*p=root;
+    struct node*q;
+    while(i<loc-1)
+    {
+        p=p->link;
+        i++;
+    }
+    q=p->link;
+    p->link=q->link;
+    q->link=NULL;
+    free(q);
+}
+}
+void reverse()
+    {
+        int temp;
+        int i,j;
+        struct node*p,*q;p=root;q=root;
+        i=0;
+        j=n-1;
+        while(i<j)
+        {
+            int k=0;
+            while(k<j)
+            {
+                q=q->link;
+                k++;
+            }
+            temp=p->data;
+            p->data=q->data;
+            q->data=temp;
+            i++;j--;
+            p=p->link;
+            q=root;       }
+        
+    }
+
+
