@@ -36,7 +36,7 @@ struct node*temp;
 }
 int main()
 { int i;
-printf("Enter the number of nodes:-\n");
+printf("Enter the  number of nodes:-\n");
 scanf("%d",&n);
 for(i=0;i<n;i++)
 {
