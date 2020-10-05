@@ -61,7 +61,7 @@ else{
         temp=temp->link;
     }
 }
-}
+
 void add()
 {struct node*temp;
 struct node*p;
