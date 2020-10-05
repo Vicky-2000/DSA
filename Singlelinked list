@@ -2,7 +2,7 @@
 #include<stdlib.h>
 struct node{
     int data;
-    struct node *link;
+    struct node *link
 };
 int n;
 struct node *root=NULL;
