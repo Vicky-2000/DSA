@@ -2,7 +2,7 @@
 #include<stdlib.h>
 int main()
 {
-    int m,n;int *arr;int c=0;
+    int m,n;int *arr;int c=0
     printf("Enter the number of rows\n");
     scanf("%d",&m);
     printf("Enter the number of rows\n");
@@ -21,7 +21,7 @@ int main()
         {
             if(*(arr+i*n+j)!=0)
             {
-                ++c;
+                ++c
             }
         }
     }
