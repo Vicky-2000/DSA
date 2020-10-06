@@ -10,19 +10,7 @@ struct node*head=NULL;
 struct node*start=NULL;
 void insert1()
 {
-struct node*temp;
-temp=(struct node *) malloc(sizeof(struct node));
-printf("Enter the node data:-\n");
-scanf("%d",&temp->data);
-printf("Enter the power:-\n");
-scanf("%d",&temp->pow);
-temp->link=NULL;
-if(root==NULL)
-{
-    root=temp;
-}
-else{struct node *p=root;
-    while(p->link!=NULL)
+
     {
         p=p->link;
     }p->link=temp;
