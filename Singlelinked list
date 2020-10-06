@@ -1,106 +1,117 @@
 #include<stdio.h>
 #include<stdlib.h>
-struct node{
-    int data;
-    struct node *link
-};
-int n;
-struct node *root=NULL;
+
 void insert();
 void add();
+void deletesp();
 void display();
-void del();
-void reverse();
-void insert()
-
+void deleteall();
+void length();
+struct node
 {
-struct node*temp;
-    temp=(struct node *)malloc(sizeof(struct node));
- printf("Enter the node data:-\n");
+    int data;
+    struct node*link;
+};
+struct node*root=NULL;
+int len,c;
+int main()
+{
+    int n;
+    while(1)
+    {
+    printf("Enter your choice:-\n");
+    printf("1.Insert node.\n");
+    printf("2.Delete a node.\n");
+    printf("3.Add at specific location.\n");
+    printf("4.Delete the linked list.\n");
+    printf("5.Display.\n");
+    printf("6.Length.\n");
+    printf("7.Quit.\n");
+    scanf("%d",&n);
+    switch(n)
+    {
+        case 1:insert();
+        break;
+        case 2:deletesp();
+        break;
+        case 3:add();
+        break;
+        case 4:deleteall();
+        break;
+        case 5:display();
+        break;
+        case 6:length();
+        len=c;
+        printf("Length is:-%d\n",len);
+        break;
+        case 7:exit(0);
+        default:
+        printf("Wrong choice bro!!!!\n");
+        
+    }
+
+
+}
+}
+void insert()
+{
+    struct node*temp;
+    temp=(struct node*)malloc(sizeof(struct node));
+    printf("Enter the data:-\n");
     scanf("%d",&temp->data);
     temp->link=NULL;
     if(root==NULL)
     {
         root=temp;
     }
-    else
-    {
-      struct node *p;
-      p=root;
-      while(p->link!=NULL)
-      {
-          p=p->link;
-      }
-      p->link=temp;
-    }
-}
-int main()
-{ int i;
-printf("Enter the number of nodes:-\n");
-scanf("%d",&n);
-for(i=0;i<n;i++)
-{
-    insert();
-}
-display();
-printf("\n");
-reverse();
-display();
-}
-void display(){
-    struct node*temp;
-temp=root;
-if(temp==NULL)
-{
-printf("empty");
-}
-else{
-    while(temp!=NULL)
-    {
-        printf("%d->",temp->data);
-        temp=temp->link;
-    }
-}
-
-void add()
-{struct node*temp;
-struct node*p;
- temp=(struct node *)malloc(sizeof(struct node));
- printf("Enter the node data:-\n");
-    scanf("%d",&temp->data);
-    int loc;
-    printf("Enter the location:-\n");
-    scanf("%d",&loc);
-    int i=1;
-    if(loc>n)
-    {
-        printf("Invalid location");
-    }
     else{
+        struct node*p;
         p=root;
-        while(i<loc)
-        {
-            p=p->link;i++;
-        }
+    while(p->link!=NULL)
+    {
+        p=p->link;
     }
-    temp->link=NULL;
-    temp->link=p->link;
     p->link=temp;
+}
+}
+void display()
+{
+    struct node*p;
+    p=root;
+    if(root==NULL)
+    {
+        printf("Empty.\n");
 
+    }
+
+    {
+        printf("%d ",p->data);
+        p=p->link;
+    }
+    printf("\n");
+}
+}
+void length()
+{ struct node*p;
+    p=root;c=0;
+    while(p!=NULL)
+    {++c;
+        p=p->link;
+    }
+    
 
 }
-void del()
-{
- struct node *temp;
- int loc;
- printf("enter the location:\n");
- scanf("%d",&loc);
- if(loc>n)
- {
-     printf("Invalid Location\n");
- }
+void deletesp()
+{struct node *temp;
+    int n;
+    printf("Enter the location:-");
+    scanf("%d",&n);
+    if(n>len)
+    {
+        printf("Invalid location.\n");
+    }
 
-else if(loc==1)
+        else if(n==1)
 {
     temp=root;
     root=temp->link;
@@ -110,7 +121,7 @@ else if(loc==1)
 else{
     int i=1;struct node*p=root;
     struct node*q;
-    while(i<loc-1)
+    while(i<n-1)
     {
         p=p->link;
         i++;
@@ -121,28 +132,44 @@ else{
     free(q);
 }
 }
-void reverse()
+void add()
+{
+    int n;int i=1;
+    struct node*temp;
+    struct node*p;
+    temp=(struct node*)malloc(sizeof(struct node));
+     printf("Enter the location:-");
+    scanf("%d",&n);
+    scanf("%d",&temp->data);
+    temp->link=NULL;
+   if(n>len)
     {
-        int temp;
-        int i,j;
-        struct node*p,*q;p=root;q=root;
-        i=0;
-        j=n-1;
-        while(i<j)
+     printf("Invalid location.\n");
+    }
+    else{
+            p=root;
+        while(i<n-1)
         {
-            int k=0;
-            while(k<j)
-            {
-                q=q->link;
-                k++;
-            }
-            temp=p->data;
-            p->data=q->data;
-            q->data=temp;
-            i++;j--;
-            p=p->link;
-            q=root;       }
+            p=p->link;i++;
+        }
+    
+    temp->link=NULL;
+    temp->link=p->link;
+    p->link=temp;
+
+    }
+}
+    void deleteall()
+    {
+        
+          struct node*p=root;
+          {
+              while(root!=NULL)
+              {
+                  p=root;
+                  root=root->link;
+                  free(p);
+              }
+          }
         
     }
-
-
