@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+
 void insert();
 void add();
 void deletesp();
@@ -82,8 +83,7 @@ void display()
         printf("Empty.\n");
 
     }
-    else{
-    while(p!=NULL)
+
     {
         printf("%d ",p->data);
         p=p->link;
