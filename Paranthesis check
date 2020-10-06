@@ -1,3 +1,4 @@
+//code by vicky
 #include<stdio.h>
 #include<string.h>
 int stack[20];
