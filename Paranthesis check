@@ -1,14 +1,14 @@
+//code by vicky
 #include<stdio.h>
 #include<string.h>
 int stack[20];
 void push(char);
-char pop();
+char pop()
 int top=-1;
 int f=0;
 int main()
 {char a[20];
-    printf("Enter the string fo checking paranthesis:-\n");
-    gets(a);
+
     for(int i=0;i<strlen(a);i++)
     {
         if(a[i]=='('||a[i]=='['||a[i]=='{')
