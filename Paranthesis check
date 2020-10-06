@@ -2,7 +2,7 @@
 #include<stdio.h>
 #include<string.h>
 int stack[20];
-void push(char);
+
 char pop()
 int top=-1;
 int f=0;
