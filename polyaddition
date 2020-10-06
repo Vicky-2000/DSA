@@ -2,11 +2,7 @@
 int main()
 {
     int m,n,i,j;
-    printf("Enter the size of array a[]:-\n");
-    scanf("%d",&m);
-    printf("Enter the size of array b[]:-\n");
-    scanf("%d",&n);
-    int a[m],b[n];
+
     printf("Enter the elements of array a[]:-\n");
     for(i=0;i<m;i++)
     {

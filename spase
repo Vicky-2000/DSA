@@ -13,13 +13,7 @@ int count=0;
 
 void add_node()
 {
-    int r,c,i,j;
-    printf("Enter the dimensions of the matrix : \n");
-    scanf("%d%d",&r,&c);
-    int mat[r][c];
-    printf("Enter the elements of the matrix : \n");
 
-    for(i=0;i<r;i++)
     {
         for(j=0;j<c;j++)
         {
@@ -33,26 +27,7 @@ void add_node()
     {
         for(j=0;j<c;j++)
         {
-            if(mat[i][j]!=0)
-            {struct node*temp;
-            temp=(struct node*)malloc(sizeof(struct node));
-                temp->column=j;
-                temp->row=i;
-                    temp->data=mat[i][j];
-                   temp->link=NULL;
-                if(head==NULL)
-                {
-                head=temp;
-                    
-                }
-                else
-                {struct node*p;
-                p=head;
-                    while(p->link!=NULL)
-                    {
-                        p=p->link;
-                    }p->link=temp;
-                }
+
             }
         }
     }
