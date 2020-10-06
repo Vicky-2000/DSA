@@ -1,50 +1,160 @@
 #include<stdio.h>
-int main()
+#include<stdlib.h>
+struct node{
+    int data;
+    int pow;
+    struct node*link;
+};
+struct node*root=NULL;
+struct node*head=NULL;
+struct node*start=NULL;
+void insert1()
 {
-    int m,n,i,j;
 
-    printf("Enter the elements of array a[]:-\n");
-    for(i=0;i<m;i++)
     {
-        scanf("%d",&a[i]);
+        p=p->link;
+    }p->link=temp;
+}
+
+}
+void insert2()
+{
+struct node*temp;
+temp=(struct node *) malloc(sizeof(struct node));
+printf("Enter the node data:-\n");
+scanf("%d",&temp->data);
+printf("Enter the power:-\n");
+scanf("%d",&temp->pow);
+temp->link=NULL;
+if(head==NULL)
+{
+    head=temp;
+}
+else{struct node *p=head;
+    while(p->link!=NULL)
+    {
+        p=p->link;
+    }p->link=temp;
+}
+}
+void add()
+{
+    struct node*temp,*p,*q;
+    
+    p=root;q=head;
+    
+    while(p!=NULL && q!=NULL)
+    {temp=(struct node *) malloc(sizeof(struct node));
+        if(p->pow==q->pow)
+        {
+            temp->data=p->data+q->data;
+            temp->pow=p->pow;
+            temp->link=NULL;
+            p=p->link;
+            q=q->link;
+        }
+        else{
+            if(p->pow>q->pow)
+            {temp->link=NULL;
+              temp->data=p->data;
+              temp->pow=p->pow;
+      
+
+               p=p->link;
+            }
+            else{
+                temp->data=q->data;
+              temp->pow=q->pow;
+              q=q->link;
+            }
+        }
+        if(start==NULL)
+           {
+             start=temp;
+          }
+    else{
+        struct node *r=start;
+        while(r->link!=NULL)
+        {
+            r=r->link;
+        }r->link=temp;
     }
-    printf("Enter the elements of array b[]:-\n");
-    for(i=0;i<n;i++)
+
+}
+    
+    while(p!=NULL)
+    {temp=(struct node *) malloc(sizeof(struct node));
+    temp->link=NULL;
+        temp->data=p->data;
+              temp->pow=p->pow;
+               
+    if(start==NULL)
     {
-        scanf("%d",&b[i]);
-    }
-    if(m>n)
-    {
-        int j=m;
-        int sum[j];
-        for(i=0;i<j;i++)
-        {
-            sum[i]=a[i];
-        }
-        for(i=0;i<n;i++)
-        {
-            sum[i]=sum[i]+b[i];
-        }
-        for(i=j-1;i>=0;i--)
-        {
-            printf("%d ",sum[i]);
-        }
+      start=temp;
     }
     else{
-        
-        int j=n;
-        int sum[j];
-        for(i=0;i<j;i++)
+        struct node *r=start;
+        while(r->link!=NULL)
         {
-            sum[i]=b[i];
-        }
-        for(i=0;i<m;i++)
+            r=r->link;
+        }r->link=temp;
+    }
+ p=p->link;
+}
+
+
+              
+    
+    while(q!=NULL)
+    {temp=(struct node *) malloc(sizeof(struct node));
+    temp->link=NULL;
+        temp->data=q->data;
+              temp->pow=q->pow;
+               if(start==NULL)
+    {
+      start=temp;
+    }
+    else{
+        struct node *r=start;
+        while(r->link!=NULL)
         {
-            sum[i]=sum[i]+a[i];
-        }
-        for(i=j-1;i>=0;i--)
-        {
-            printf("%d ",sum[i]);
-        }
-    }return 0;
+            r=r->link;
+        }r->link=temp;
+    }
+
+              q=q->link;
+    }
+}
+    
+
+void display()
+{
+    struct node *p=start;
+    if(start==NULL)
+    {
+        printf("Empty.\n");
+    }
+    while(p!=NULL)
+    {
+        printf("%d ",p->data);
+        p=p->link;
+    }printf("\n");
+}
+
+int main()
+{
+int n,m;
+printf("Enter the number of nodes for polynomial 1:-\n");
+scanf("%d",&n);
+for(int i=0;i<n;i++)
+{
+    insert1();
+}
+printf("Enter the number of nodes for polynomial 2:-\n");
+scanf("%d",&m);
+for(int i=0;i<m;i++)
+{
+    insert2();
+}add();
+display();
 }
