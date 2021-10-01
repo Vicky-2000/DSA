@@ -53,7 +53,7 @@ void printArray(int* arr, int size)
     for (i = 0; i < size; ++i)
         printf("%d ", arr[i]);
 }
- 
+// chages the code for user input array
 /* Driver program to test above functions */
 int main()
 {
