@@ -35,6 +35,7 @@ else{struct node *p=head;
     {
         p=p->link;
     }p->link=temp;
+    //this is also important hackobtew fest ki jai ho
 }
 }
 void add()
