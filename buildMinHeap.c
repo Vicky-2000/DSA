@@ -10,7 +10,6 @@ void swap(int* a, int* b)
  	int swp = *a;
  	*a = *b;
  	*b = swp; 
-	//swap done here
  }
 void minHeapify(struct MinHeap* minHeap, int p)
 {
@@ -68,8 +67,8 @@ int main()
 	}
     int size = sizeof(arr)/sizeof(arr[0]);
  
-    /*printf("Given array is \n");
-    print(arr, size);*/
+    printf("Given array is \n");
+    print(arr, size);
  
     heapSort(arr, size);
  
