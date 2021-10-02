@@ -158,4 +158,3 @@ for(int i=0;i<m;i++)
 }add();
 display();
 }
-**Nice
