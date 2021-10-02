@@ -28,6 +28,7 @@ void merge(vector<int> &arr, int l, int m, int r)
             j++;
         }
         k++;
+        //this is importantat change we sholud look into it
     }
 
     while (i < n1){
