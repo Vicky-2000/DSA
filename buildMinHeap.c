@@ -16,6 +16,7 @@ void minHeapify(struct MinHeap* minHeap, int p)
 {
     int smallest = p;  
     int left = (p << 1) + 1;  
+	//this is importantat change we sholud look into it
     int right = (p + 1) << 1; 
     if (left < minHeap->size && 
         minHeap->array[left] < minHeap->array[smallest])
