@@ -12,7 +12,7 @@ int maxSubArraySum(int a[], int size)
         max_so_far = max(max_so_far, curr_max); 
    } 
    return max_so_far; 
-  //this change in kadane algo so that this can be used
+  /*this change in kadane algo so that this can be used*/
 
 } 
 
