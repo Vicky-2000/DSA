@@ -72,7 +72,7 @@ int main()
  
     heapSort(arr, size);
  
-    //printf("\nSorted array is \n");
+    printf("\nSorted array is \n");
     print(arr, size);
     printf("\n");
     return 0;
