@@ -1,4 +1,4 @@
-//You can use stl and easily solved (c++)
+// You can use stl and easily solved (c++)
 #include<stdio.h>
 #include<string.h>
 int stack[20];
