@@ -18,17 +18,18 @@ void merge(vector<int> &arr, int l, int m, int r)
     i = 0;
     j = 0;
     k = l;
+    //this is importantat change
     while (i < n1 && j < n2){
         if (L[i] <= R[j]){
             arr[k] = L[i];
             i++;
         }
+        
         else{
             arr[k] = R[j];
             j++;
         }
         k++;
-        //this is importantat change we sholud look into it
     }
 
     while (i < n1){
