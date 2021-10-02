@@ -72,6 +72,7 @@ void insert()
         p=p->link;
     }
     p->link=temp;
+    //temp is not require here we can use "tem" instead of temp
 }
 }
 void display()
