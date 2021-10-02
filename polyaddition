@@ -13,7 +13,8 @@ void insert1()
 
     {
         p=p->link;
-    }p->link=temp;
+        p->link=temp;
+    }
     //this is importantat change we sholud look into it
 }
 
@@ -36,7 +37,6 @@ else{struct node *p=head;
     {
         p=p->link;
     }p->link=temp;
-    //this is also important hackobtew fest ki jai ho
 }
 }
 void add()
