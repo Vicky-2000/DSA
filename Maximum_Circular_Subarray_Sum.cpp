@@ -9,7 +9,7 @@ int maxCircularSum(int a[], int n)
     if (n == 1) 
         return a[0]; 
   
-    // Initialize sum variable which store total sum of the array. 
+  
     int sum = 0; 
     for (int i = 0; i < n; i++) { 
         sum += a[i]; 
