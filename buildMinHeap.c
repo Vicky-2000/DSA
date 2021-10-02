@@ -10,7 +10,7 @@ void swap(int* a, int* b)
  	int swp = *a;
  	*a = *b;
  	*b = swp; 
-	//this should be change here
+	
  }
 void minHeapify(struct MinHeap* minHeap, int p)
 {
