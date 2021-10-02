@@ -14,6 +14,7 @@ void insert1()
     {
         p=p->link;
     }p->link=temp;
+    //this is importantat change we sholud look into it
 }
 
 }
