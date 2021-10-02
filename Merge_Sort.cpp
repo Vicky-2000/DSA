@@ -63,7 +63,7 @@ void printArray(vector<int> &A, int size){
 int main(){
     int arr_size;
     vector<int> arr;
-
+//do this like that
     cout << "Enter the number of elements: " << endl;
     cin >> arr_size;
     cout << "Enter the elements you want to sort: " << endl;
