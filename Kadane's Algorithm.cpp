@@ -14,8 +14,6 @@ int maxSubArraySum(int a[], int size)
    return max_so_far; 
 
 } 
-//
-
 int main() 
 { 
    int a[] =  {-2, -3, 4, -1, -2, 1, 5, -3}; 
