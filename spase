@@ -27,7 +27,7 @@ void add_node()
     {
         for(j=0;j<c;j++)
         {
-
+//this is importantat change we sholud look into it
             }
         }
     }
