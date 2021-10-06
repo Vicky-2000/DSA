@@ -27,10 +27,11 @@ int main()
 {
 	printf("Interpolation Search\n");
 	printf("********************\n\n");
-	int arr[100];
+	//int arr[100];
 	int n,i,no;
 	printf("Enter Size of Array : ");
 	scanf("%d",&n);
+	int arr[n];
 	printf("\n");
 	printf("Enter Numbers : \n");
 	for(i=0;i<n;i=i+1)
