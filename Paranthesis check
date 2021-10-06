@@ -7,7 +7,11 @@ char pop()
 int top=-1;
 int f=0;
 int main()
-{char a[20];
+{
+
+int n; 
+scanf("%d",&n);
+char a[n];
 
     for(int i=0;i<strlen(a);i++)
     {
