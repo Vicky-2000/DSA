@@ -58,8 +58,14 @@ void printArray(int* arr, int size)
 
 int main()
 {
-    int arr[] = {12, 11, 13, 5, 6, 7};
-    int size = sizeof(arr)/sizeof(arr[0]);
+    //int arr[] = {12, 11, 13, 5, 6, 7};
+    //int size = sizeof(arr)/sizeof(arr[0]);
+	int n;
+	scanf("%d",&n);
+	int arr[n];
+	
+	for(int i=0;i<n;i++)
+		scanf("%d",&arr[i]);
  
     printf("Given array is \n");
     printArray(arr, size);
