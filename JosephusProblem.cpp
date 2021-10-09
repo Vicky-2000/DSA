@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-ssd
+
 int josephus(int n, int k)
 {
     if (n == 1)
