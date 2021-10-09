@@ -77,7 +77,7 @@ int isOperator(char ch){
 char* infixToPostfix(char* infix){
     struct stack * sp = (struct stack *) malloc(sizeof(struct stack));
     sp->size = 10; 
-    sp->top = 0;
+    sp->top =-1;
     sp->arr = (char *) malloc(sp->size * sizeof(char));
     char * postfix = (char *) malloc((strlen(infix)+1) * sizeof(char));
     int i=0; // Track infix traversal
