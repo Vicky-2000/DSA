@@ -16,4 +16,4 @@ int main()
     cout << "Safe Position is " << josephus(n, k);
     return 0;
 }
-ssd
+
