@@ -53,11 +53,12 @@ int main()
 {
 	printf("Merge Sort\n");
 	printf("**********\n\n");
-	int arr[100];
+	//int arr[100];
 	int n,i;
 	printf("Enter Size of Array : ");
 	scanf("%d",&n);
 	printf("\n");
+	int arr[n];
 	printf("Enter Numbers : \n");
 	for(i=0;i<n;i=i+1)
 	{
