@@ -20,7 +20,6 @@ void insert1()
 }
 
 }
-// this is an insert function
 void insert2()
 {
 struct node*temp;
