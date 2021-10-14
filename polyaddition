@@ -1,4 +1,4 @@
-// this is an polynomial addition problem
+
 #include<stdio.h>
 #include<stdlib.h>
 struct node{
