@@ -1,6 +1,6 @@
 #include<iostream> 
 using namespace std; 
-
+// sushant 
 int maxSubArraySum(int a[], int size) 
 { 
    int max_so_far = a[0]; 
