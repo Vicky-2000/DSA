@@ -8,6 +8,8 @@ int josephus(int n, int k)
     else
         return (josephus(n - 1, k) + k) % n;
 }
+
+//main function
 int main()
 {
     int n, k;
