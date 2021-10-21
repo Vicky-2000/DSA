@@ -39,6 +39,7 @@ struct maxheap* buildheap(int *arr,int s)
 	return Mheap;
 }
 //This is important change
+//+1 i would say
 void heapsort(int* arr,int size)
 {
 	struct maxheap* Mheap=buildheap(arr,size);
