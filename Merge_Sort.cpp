@@ -19,6 +19,7 @@ void merge(vector<int> &arr, int l, int m, int r)
     j = 0;
     k = l;
     //this is importantat change
+    //i agree with you raghu
     while (i < n1 && j < n2){
         if (L[i] <= R[j]){
             arr[k] = L[i];
