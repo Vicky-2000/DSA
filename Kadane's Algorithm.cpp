@@ -1,5 +1,5 @@
 #include<iostream> 
-using namespace std; 
+using namespace std; //nay
 int maxSubArraySum(int a[], int size) 
 { 
    int max_so_far = a[0]; 
