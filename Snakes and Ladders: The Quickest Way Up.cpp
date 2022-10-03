@@ -1,4 +1,4 @@
-// Link to the problem : https://www.hackerrank.com/challenges/the-quickest-way-up/problem
+
 
 #include <bits/stdc++.h>
 
