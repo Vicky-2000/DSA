@@ -1,4 +1,3 @@
-// Duplicate zeros
 class Solution {
     
     void dupli(int arr[], int index, int len){
