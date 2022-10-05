@@ -1,4 +1,4 @@
-#include<iostream> //na
+#include<iostream> 
 using namespace std; 
 int maxSubArraySum(int a[], int size) 
 { 
@@ -13,7 +13,6 @@ int maxSubArraySum(int a[], int size)
    return max_so_far; 
 
 } 
-//main function
 int main() 
 { 
    int a[] =  {-2, -3, 4, -1, -2, 1, 5, -3}; 
