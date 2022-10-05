@@ -1,5 +1,5 @@
 #include <iostream>
-using namespace std; //nayan kamal verma
+using namespace std; 
 
 void swap(int *a, int *b) {
   int temp = *a;
