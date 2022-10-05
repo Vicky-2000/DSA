@@ -1,5 +1,4 @@
 class Solution {
-    //
     void dupli(int arr[], int index, int len){
         for(int i=len-1; i>index;i--){
             arr[i]=arr[i-1];
