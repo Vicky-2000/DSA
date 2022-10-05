@@ -77,7 +77,7 @@ int area(vector<int> heights)
 }
 int main()
 {
-     vector<int> heights{6, 2, 5, 4, 5, 1, 6};
+     vector<int> heights{6, 2, 5, 4, 5, 1, 6,8};
      // heights.push_back(6);
      // heights.push_back(2);
      // heights.push_back(5);
@@ -85,7 +85,7 @@ int main()
      // heights.push_back(5);
      // heights.push_back(1);
      // heights.push_back(6);
-
+     // heights.push_back(8);
      // int n = heights.size();
      // cout << n;
      cout << heights[2];
