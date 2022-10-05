@@ -29,7 +29,6 @@ int main()
 // return the length of the longest subsequene of consecutive integers
 int findLongestConseqSubseq(int arr[], int N)
 {
-  //Your code here
     vector<int> v(100000+1);
     int maxval=0;
     for(int i=0;i<N;i++)
