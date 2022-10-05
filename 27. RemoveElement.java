@@ -2,7 +2,7 @@ class Solution {
     
     void delElement(int[] arr, int key, int len){
         for(int i=key;i<len-1;i++){
-            arr[i]=arr[i+1];
+            arr[i]=arr[++i];
         }
     }
     
