@@ -6,8 +6,8 @@ class Solution {
 
         for (int indexA = 0; indexA <= k; indexA++) {
             for (int indexB = 0; indexB < nums.length - 1; indexB++) {
-                if (nums[indexB] > nums[indexB + 1]) { 
-                    swap(nums, indexB, indexB + 1);
+                if (nums[indexB] > nums[indexB++]) { 
+                    swap(nums, indexB, indexB++);
                 }
             }
         }
