@@ -15,4 +15,3 @@ class Solution {
         return len;
     }
 }
-// Explain the code
