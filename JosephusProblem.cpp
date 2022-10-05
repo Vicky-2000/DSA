@@ -15,7 +15,7 @@ int main()
     int n, k;
     cout << "Input the value for n and k : ";
     cin >> n >> k;
-    cout << "Safe Position is " << josephus(n, k);
+    cout << "Safe Position is:" << josephus(n, k);
     return 0;
 }
 
