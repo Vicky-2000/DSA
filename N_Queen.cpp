@@ -13,6 +13,7 @@ void printsol(int board[n][n])
 bool isvalid(int board[n][n], int row, int col) //We just need to check for the upper rows which have been filled before this
 {
     //To check vertically in a particular column
+    
     for (int i = 0; i < row; i++)
         if (board[i][col])
             return false;
