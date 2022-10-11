@@ -1,8 +1,7 @@
 #include <bits/stdc++.h> 
 using namespace std; 
   
-// The function returns maximum 
-// circular contiguous sum in a[] 
+//Maximum Circular
 int maxCircularSum(int a[], int n) 
 { 
     // Corner Case 
